@@ -66,7 +66,7 @@ export default {
       if (this.password !== this.confirmPassword) {
         this.errorMessage = 'Passwords do not match';
         return;
-      }
+      }zz
 
       try {
         const response = await AuthService.register({ username: this.username, password: this.password });

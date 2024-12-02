@@ -15,17 +15,6 @@ axios.interceptors.request.use(config => {
   return Promise.reject(error);
 });
 
-// Handle token expiration
-axios.interceptors.response.use(response => {
-  return response;
-}, error => {
-  if (error.response.status === 401) {
-    localStorage.removeItem('token');
-    router.push ('/login'); // Redirect to login page
-  }
-  return Promise.reject(error);
-});
-
 createApp(App)
   .use(router)
   .mount('#app');

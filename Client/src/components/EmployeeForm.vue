@@ -143,8 +143,8 @@ export default {
       event.target.value = input;
       this.employee.contact = input;
     },
+    
     async submitForm() {
-      // Set default profile picture if not provided
       if (!this.employee.profilePicture) {
         this.employee.profilePicture = defaultAvatar;
       }
